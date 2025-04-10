@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 st.title("Secure Data Vault")
-api = "http://localhost:5000"
+api = "https://web-production-5700.up.railway.app/"
 
 if "token" not in st.session_state:
     st.session_state.token = None
