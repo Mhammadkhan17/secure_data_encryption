@@ -91,5 +91,6 @@ def download(file_id):
         decrypted = decrypt_file(encrypted_data)
         return send_file(BytesIO(decrypted), download_name=row[1], as_attachment=True)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=10000)
